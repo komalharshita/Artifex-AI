@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Petalyx — Benchmark all AI staff</title>
-  <meta name="description" content="Benchmark the impact of all your AI staff.">
+  <title>Artifex AI — From Prompts to Visual Possibilities</title>
+  <meta name="description" content="Artifex AI is a planned creative poster-design tool for exploring event concepts, visual direction, and editable layouts. See how ideas can become visual experiences.">
   <meta name="theme-color" content="#e9eee0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,10 +34,13 @@
     .hero{position:relative;height:100vh;min-height:620px;overflow:hidden;background:#fff}
     .nav{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:44px;padding:5px 5px 5px 16px;border-radius:999px;background:rgba(255,255,255,.9);box-shadow:0 0 0 1px rgba(0,0,0,.05),0 6px 18px rgba(0,0,0,.06);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);white-space:nowrap}
     .brand{display:flex;align-items:center;gap:6px;font-size:22px;font-weight:500;letter-spacing:-.04em}.brand svg{width:30px;height:22px;flex:none}
+    .nav-links{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:500;letter-spacing:-.01em}.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
     .cloud{position:absolute;z-index:3;pointer-events:none}.cloud-l{top:-3%;left:-5%;width:min(44vw,640px)}.cloud-r{top:2%;right:-6%;width:min(42vw,620px)}
     .cloud img{width:100%;height:auto}
     .hero h1{position:absolute;z-index:6;top:31%;left:0;width:100%;padding:0 16px;text-align:center;font-size:clamp(34px,5.2vw,76px);font-weight:400;letter-spacing:-.045em;line-height:1.04}
     .hero h1 em{color:var(--olive);font-weight:500}
+    .hero-copy{position:absolute;z-index:7;top:calc(31% + clamp(88px,10.8vw,158px));left:50%;transform:translateX(-50%);display:grid;justify-items:center;gap:14px;width:min(620px,calc(100% - 32px));padding:0 8px;text-align:center}
+    .hero-description{max-width:560px;font-size:14px;line-height:1.4;color:var(--ink);text-shadow:0 1px 14px rgba(255,255,255,.45)}
     .hero-media{position:absolute;left:0;right:0;bottom:0;height:72%;z-index:2;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%);mask-image:linear-gradient(to bottom,transparent 0,#000 22%)}
     .hero-media video{width:100%;height:100%;object-fit:cover;object-position:center 70%}
     .hero-glass{position:absolute;inset:0;z-index:5;pointer-events:none}
@@ -88,21 +91,21 @@
     footer{position:relative;z-index:6;background:var(--lime);padding:34px 4vw 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;row-gap:22px}
     .f-logo{width:72px;height:72px;overflow:visible}
     .f-links{display:flex;gap:24px;font-size:13px;color:#1d240c}.f-links a:hover{text-decoration:underline;text-underline-offset:3px}
-    .f-social{display:flex;gap:16px;justify-self:end}.f-social a{display:grid;place-items:center;width:22px;height:22px}
+    .f-social{display:flex;gap:16px;justify-self:end}.f-social span{display:grid;place-items:center;width:22px;height:22px}
     .f-social svg{width:18px;height:18px}
     .f-copy{grid-column:1/-1;text-align:center;font-size:11px;color:#2a330f}
     @media(max-width:900px){
-      .nav{gap:24px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .nav{gap:24px}.nav-links{gap:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}
       .card{height:120px}.logos{flex-wrap:wrap;justify-content:center;gap:14px 26px}.logo-item{font-size:17px}
       .stats{height:auto;min-height:100vh;padding:90px 0 300px}.stats-inner{height:auto;min-height:calc(100vh - 390px)}
       .tree-wrap{bottom:0}.band{display:none}
     }
     @media(max-width:760px){
-      .hero{height:100svh;min-height:560px}.hero h1{top:26%}
+      .hero{height:100svh;min-height:560px}.hero h1{top:26%}.hero-copy{top:calc(26% + 82px);gap:12px}.hero-description{font-size:13px}
       .hero-media{height:66%;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%);mask-image:linear-gradient(to bottom,transparent 0,#000 14%)}
       .hero-media video{object-position:38% 100%;transform:scale(1.12);transform-origin:50% 100%}
       .cloud-l{width:70vw;left:-18vw;top:6%}.cloud-r{width:66vw;right:-20vw;top:10%}
-      .nav{top:16px;gap:18px;padding-left:12px}.brand{font-size:19px}
+      .nav{top:16px;gap:10px;padding-left:12px}.nav-links{gap:7px;font-size:10px}.brand{font-size:19px}
       .loop{height:auto;min-height:0;padding:12vh 0 40px}.loop-head{position:relative;top:auto}
       .loop-cloud{width:62vw;left:-14vw;top:2vh;opacity:.9}
       .track{position:relative;inset:auto;flex-direction:column;margin-top:40px}
@@ -116,7 +119,8 @@
       footer{grid-template-columns:1fr;justify-items:center;text-align:center}
       .f-links{gap:18px;flex-wrap:wrap;justify-content:center}.f-social{justify-self:center}
     }
-    @media(max-width:420px){.nav{gap:12px}.brand{font-size:17px}.brand svg{width:25px}.nav .btn{padding:0 12px;font-size:12px}.card{padding:16px}.card small{font-size:9.5px}.card b{font-size:32px}.logos{gap:12px 18px}}
+    @media(max-width:420px){.nav{gap:6px;padding-left:10px}.nav-links{gap:5px;font-size:9px}.brand{font-size:15px}.brand svg{width:24px}.nav .btn{height:34px;padding:0 10px;font-size:10px}.card{padding:16px}.card small{font-size:9.5px}.card b{font-size:32px}.logos{gap:12px 18px}}
+    @media(max-width:380px){.nav{width:calc(100% - 24px);flex-wrap:wrap;justify-content:space-between;gap:8px;padding:7px 10px;border-radius:20px}.nav-links{order:3;width:100%;justify-content:space-between;gap:6px;font-size:10px}.nav>.btn{order:2;height:32px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important}.drift-a,.drift-b,.petal{animation:none!important}}
   </style>
 </head>
@@ -126,43 +130,49 @@
     <main>
       <section class="hero" id="hero" aria-labelledby="heroTitle">
         <nav class="nav" aria-label="Main navigation">
-          <a class="brand" href="#hero" aria-label="Petalyx home">
+          <a class="brand" href="#hero" aria-label="Artifex AI home">
             <svg viewBox="0 0 30 22" aria-hidden="true"><circle cx="4" cy="17" r="3.6" fill="currentColor"/><path d="M10.5 18.5 16.8 5.2 25.5 18.5" fill="none" stroke="currentColor" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>petalyx</span>
+            <span>Artifex AI</span>
           </a>
-          <a class="btn" href="#cta">Start for $0</a>
+          <div class="nav-links">
+            <a href="#loop">How It Works</a>
+            <a href="#stats">Creative Features</a>
+            <a href="#hero">About</a>
+          </div>
+          <a class="btn" href="#stats">Create Your Poster</a>
         </nav>
         <div class="cloud cloud-l" data-par="-60"><img class="drift-a" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093216_44218665-b15e-4566-a2d4-2676ab03609d.png" alt=""></div>
         <div class="cloud cloud-r" data-par="-90"><img class="drift-b" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093215_0f37c0c3-f82c-485b-87dd-5a35b75a8782.png" alt=""></div>
-        <h1 id="heroTitle" class="split">Benchmark the impact of<br>all your <em>AI staff.</em></h1>
+        <h1 id="heroTitle" class="split">Turn your ideas into<br><em>visual masterpieces.</em></h1>
+        <div class="hero-copy">
+          <p class="hero-description reveal">From prompts to visual possibilities. Artifex AI is being designed to turn event briefs into poster concepts; AI-assisted direction and editable layouts are planned.</p>
+          <a class="btn reveal" href="#stats">Start Creating</a>
+        </div>
         <div class="hero-media">
           <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093215_b7826239-e451-4e15-b42b-d6bcf9497a32.png" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093331_5998f443-1b9c-4b62-820c-8219c73c72c4.mp4" aria-label="Cherry blossom petals drift along a river as birds cross the valley"></video>
         </div>
         <div class="hero-glass" id="heroGlass" aria-hidden="true"></div>
       </section>
-      <section class="stats" id="stats" aria-label="Petalyx impact">
+      <section class="stats" id="stats" aria-label="Illustrative planned creative capabilities, not measured performance">
         <div class="sq-field" data-count="22" aria-hidden="true"></div>
         <div class="tree-wrap"><img class="tree" id="tree" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093215_95f11900-c4a0-49ad-bb2d-bb927dd594ee.png" alt=""></div>
         <div class="stats-inner">
-          <span class="pill reveal">Teams rely on us</span>
-          <h2 class="h2 split">80,000+ flows<br>finished on autopilot.</h2>
-          <div class="cards" aria-label="Impact metrics">
-            <article class="card"><small>Staff Time Freed</small><b data-to="40" data-dec="0" data-suf="%">0%</b></article>
-            <article class="card"><small>Customers</small><b data-to="300" data-dec="0" data-suf="+">0+</b></article>
-            <article class="card"><small>Task Success Rates</small><b data-to="99.2" data-dec="1" data-suf="%">0%</b></article>
-            <article class="card"><small>Output Reliability</small><b data-to="99.2" data-dec="1" data-suf="%">0%</b></article>
+          <span class="pill reveal">Creativity, Reimagined</span>
+          <h2 class="h2 split">From a blank canvas<br>to a creative first draft.</h2>
+          <div class="cards" aria-label="Illustrative planned creative capabilities, not measured results">
+            <article class="card"><small>Creative Directions (planned)</small><b data-to="3" data-dec="0" data-suf="+">0+</b></article>
+            <article class="card"><small>Customizable Palettes (planned)</small><b data-to="5" data-dec="0" data-suf="+">0+</b></article>
+            <article class="card"><small>Editable Design (planned)</small><b data-to="100" data-dec="0" data-suf="%">0%</b></article>
+            <article class="card"><small>Creative Control (planned)</small><b>You</b></article>
           </div>
           <div class="cards-shadow" aria-hidden="true"></div>
           <div class="logo-wrap">
             <div class="band" id="band" aria-hidden="true"></div>
-            <div class="logos" aria-label="Works with teams using Slack, Zapier, Dropbox, HubSpot and Notion">
-              <span class="logo-item">
-                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g fill="currentColor"><rect x="7.4" y="1" width="3.2" height="7.4" rx="1.6"/><rect x="11.1" y="7.4" width="7.4" height="3.2" rx="1.6"/><rect x="9.4" y="11.6" width="3.2" height="7.4" rx="1.6"/><rect x="1" y="9.4" width="7.4" height="3.2" rx="1.6"/></g></svg>slack
-              </span>
-              <span class="logo-item zapier">zapier</span>
-              <span class="logo-item"><svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true"><path fill="currentColor" d="m5 0 5 3-5 3-5-3zm10 0 5 3-5 3-5-3zM5 6l5 3-5 3-5-3zm10 0 5 3-5 3-5-3zM5 12l5 3-5 3-5-3zm10 0 5 3-5 3-5-3z"/></svg>Dropbox</span>
-              <span class="logo-item">HubSpot</span>
-              <span class="logo-item notion"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5 13V5l7 8V5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Notion</span>
+            <div class="logos" aria-label="Creative disciplines">
+              <span class="logo-item">Typography</span>
+              <span class="logo-item">Color</span>
+              <span class="logo-item">Composition</span>
+              <span class="logo-item">Visual Ideas</span>
             </div>
           </div>
         </div>
@@ -173,26 +183,26 @@
           <span class="glass"></span><span class="glass"></span><span class="glass"></span>
         </div>
         <header class="loop-head">
-          <span class="pill reveal">Expert escalation</span>
-          <h2 class="h2 split" id="loopHeading">Humans take over only at<br>the crunch.</h2>
+          <span class="pill reveal">Your Creative Workflow</span>
+          <h2 class="h2 split" id="loopHeading">Three steps from<br>idea to visual impact.</h2>
         </header>
-        <div class="track" id="track" aria-label="Human review workflow">
-          <article class="panel is-active" tabindex="0" aria-label="Step 1: Ticket comes in">
-            <div class="panel-in"><span class="num" aria-hidden="true">1</span><div class="step">
+        <div class="track" id="track" aria-label="Planned poster design workflow">
+          <article class="panel is-active" tabindex="0" aria-label="Step 1: Describe your idea">
+            <div class="panel-in"><span class="num" aria-hidden="true">01</span><div class="step">
               <img class="mini-cloud" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093215_0f37c0c3-f82c-485b-87dd-5a35b75a8782.png" alt="">
-              <h3>Ticket comes in</h3><p>A shopper files a return claim with the purchase details, why it's going back, and any proof they can share.</p>
+              <h3>Describe your idea</h3><p>The planned workflow starts with an event title, short description, and key details. Mood, audience, and color choices help shape a creative direction.</p>
             </div></div>
           </article>
-          <article class="panel" tabindex="0" aria-label="Step 2: Review record">
-            <div class="panel-in"><span class="num" aria-hidden="true">2</span><div class="step">
+          <article class="panel" tabindex="0" aria-label="Step 2: Explore the design">
+            <div class="panel-in"><span class="num" aria-hidden="true">02</span><div class="step">
               <img class="mini-cloud" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093216_44218665-b15e-4566-a2d4-2676ab03609d.png" alt="">
-              <h3>Review record</h3><p>Your agent scans the buyer profile, earlier purchases, prior returns, and any notable account events.</p>
+              <h3>Explore the design</h3><p>Artifex AI is planned to suggest headlines, supporting copy, palettes, and layout directions. Explore concepts and choose a direction that fits your event.</p>
             </div></div>
           </article>
-          <article class="panel" tabindex="0" aria-label="Step 3: Apply the rules">
-            <div class="panel-in"><span class="num" aria-hidden="true">3</span><div class="step">
+          <article class="panel" tabindex="0" aria-label="Step 3: Refine and create">
+            <div class="panel-in"><span class="num" aria-hidden="true">03</span><div class="step">
               <img class="mini-cloud" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093215_0f37c0c3-f82c-485b-87dd-5a35b75a8782.png" alt="">
-              <h3>Apply the rules</h3><p>Your agent measures the claim against return terms, qualifying conditions, time limits, and edge cases.</p>
+              <h3>Refine and create</h3><p>A poster preview, editing controls, and export workflow are planned; they are not implemented yet.</p>
             </div></div>
           </article>
         </div>
@@ -202,28 +212,28 @@
         <div class="cta-img"><img id="ctaImg" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261021_093217_cc690198-ad8c-4127-8734-8485bd878351.png" alt="Moonlit cherry blossom valley"></div>
         <div class="petals" id="petals" aria-hidden="true"></div>
         <div class="cta-card" id="ctaCard">
-          <span class="pill">Get started</span>
-          <h2 class="h2 split" id="ctaHeading">Every hour your agents free up is gold.</h2>
-          <p class="reveal">Set up your first AI agent in minutes and see results on day one.</p>
-          <a class="btn reveal" href="#hero">Start for $0</a>
+          <span class="pill">Your Next Creative Idea</span>
+          <h2 class="h2 split" id="ctaHeading">Your next great design starts with an idea.</h2>
+          <p class="reveal">Artifex AI is being developed to help you explore a visual direction and shape your event concept into a poster worth sharing.</p>
+          <a class="btn reveal" href="#stats">Create Your Poster</a>
         </div>
       </section>
     </main>
     <footer id="footer">
-      <svg class="f-logo" viewBox="0 0 80 80" role="img" aria-label="Petalyx">
+      <svg class="f-logo" viewBox="0 0 80 80" role="img" aria-label="Artifex AI abstract logo">
         <circle id="fRing" cx="40" cy="40" r="37" fill="none" stroke="#111" stroke-width="2.4" stroke-dasharray="233" stroke-dashoffset="233" transform="rotate(-90 40 40)"/>
         <circle class="fdot" cx="22" cy="40" r="4.5" fill="#111"/><circle class="fdot" cx="40" cy="40" r="4.5" fill="#111"/><circle class="fdot" cx="58" cy="40" r="4.5" fill="#111"/>
         <path id="fMark" d="M33 53 43 31 56 53" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="60" stroke-dashoffset="60"/>
       </svg>
       <nav class="f-links" aria-label="Footer navigation">
-        <a href="#stats">Toolkit</a><a href="#loop">Mission</a><a href="mailto:hello@petalyx.ai">Help desk</a><a href="#footer">Terms</a>
+        <a href="#loop">How It Works</a><a href="#stats">Features</a><a href="#hero">About</a>
       </nav>
-      <div class="f-social" aria-label="Social links">
-        <a href="https://x.com" aria-label="X"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M14.2 1.5h2.4l-5.2 5.9 6.1 8.9h-4.8l-3.8-5.5-4.9 5.5H1.5l5.6-6.4L1.3 1.5h4.9l3.4 5.1zm-.9 13.2h1.3L5.3 3H3.9z"/></svg></a>
-        <a href="https://instagram.com" aria-label="Instagram"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="15" height="15" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="13.6" cy="4.6" r="1" fill="currentColor"/></svg></a>
-        <a href="https://linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M3.3 6.6H.7V17h2.6zM2 5.2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M17.3 11c0-3.1-1.7-4.6-4-4.6a3.5 3.5 0 0 0-3.1 1.7V6.6H7.6V17h2.6v-5.2c0-1.4.3-2.8 2.1-2.8s1.8 1.6 1.8 2.9V17h2.6z"/></svg></a>
+      <div class="f-social" role="img" aria-label="Social profile icons; profile links are not available yet">
+        <span><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M14.2 1.5h2.4l-5.2 5.9 6.1 8.9h-4.8l-3.8-5.5-4.9 5.5H1.5l5.6-6.4L1.3 1.5h4.9l3.4 5.1zm-.9 13.2h1.3L5.3 3H3.9z"/></svg></span>
+        <span><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="15" height="15" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="13.6" cy="4.6" r="1" fill="currentColor"/></svg></span>
+        <span><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M3.3 6.6H.7V17h2.6zM2 5.2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M17.3 11c0-3.1-1.7-4.6-4-4.6a3.5 3.5 0 0 0-3.1 1.7V6.6H7.6V17h2.6v-5.2c0-1.4.3-2.8 2.1-2.8s1.8 1.6 1.8 2.9V17h2.6z"/></svg></span>
       </div>
-      <p class="f-copy">© 2026 Petalyx. All rights reserved.</p>
+      <p class="f-copy">© 2026 Artifex AI. All rights reserved.</p>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -324,13 +334,13 @@
         }));
       }
       function setCounters(p) {
-        document.querySelectorAll('.card b').forEach(b=>{
+        document.querySelectorAll('.card b[data-to]').forEach(b=>{
           b.textContent=(Number(b.dataset.to)*p).toFixed(Number(b.dataset.dec))+b.dataset.suf;
         });
       }
       function setupScroll() {
         if (!hasMotionLibs || reduce) {
-          document.querySelectorAll('.card b').forEach(b=>{b.textContent=Number(b.dataset.to).toFixed(Number(b.dataset.dec))+b.dataset.suf});
+          document.querySelectorAll('.card b[data-to]').forEach(b=>{b.textContent=Number(b.dataset.to).toFixed(Number(b.dataset.dec))+b.dataset.suf});
           return;
         }
         gs.to('#heroTitle',{yPercent:-60,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
