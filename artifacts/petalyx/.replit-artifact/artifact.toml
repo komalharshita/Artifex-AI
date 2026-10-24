@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Petalyx"
+description = "A responsive Petalyx landing page for benchmarking AI staff, with a cherry-blossom anime-watercolor landscape, live impact metrics, a human-escalation story, and a clear start call to action."
+version = "1.0.0"
+id = "artifacts/petalyx"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22450
+
+[services.development]
+run = "pnpm --filter @workspace/petalyx run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/petalyx", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/petalyx/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22450"
+BASE_PATH = "/"
